@@ -21,6 +21,25 @@
             [path applyTransform:CGAffineTransformMakeTranslation(self.size, 0)];
             break;
             
+        case BEMBoxTypeHexagon:
+            path = [[UIBezierPath alloc] init];
+            
+            //CGFloat a = self.size/(1+2*cosf(30*M_PI/180));
+            //CGFloat x = (self.size-a)/2;
+            
+            CGFloat x = self.size*0.25;
+            
+            [path moveToPoint:CGPointMake(x, self.size*0.1)];
+            [path addLineToPoint:CGPointMake(self.size-x, self.size*0.1)];
+            [path addLineToPoint:CGPointMake(self.size, self.size*0.5)];
+            //[path addLineToPoint:CGPointMake(self.size, self.size*0.66)];
+            [path addLineToPoint:CGPointMake(self.size-x, self.size*0.9)];
+            [path addLineToPoint:CGPointMake(x, self.size*0.9)];
+            [path addLineToPoint:CGPointMake(0, self.size*0.5)];
+            //[path addLineToPoint:CGPointMake(0, self.size*0.33)];
+            [path closePath];
+            break;
+            
         default: {
             CGFloat radius = self.size / 2;
             path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.size / 2, self.size / 2)

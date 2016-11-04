@@ -21,7 +21,11 @@ typedef NS_ENUM(NSInteger, BEMBoxType) {
     
     /** Squared box.
      */
-    BEMBoxTypeSquare
+    BEMBoxTypeSquare,
+    
+    /** Hexagon box.
+     */
+    BEMBoxTypeHexagon
 };
 
 // Tell the compiler to assume that no method should have a NULL value

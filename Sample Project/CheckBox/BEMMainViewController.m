@@ -50,7 +50,7 @@
 }
 
 - (IBAction)didTapOnBoxTypeSegmentedControl:(UISegmentedControl *)segmentedControl {
-    self.checkBox.boxType = (segmentedControl.selectedSegmentIndex == 0) ?BEMBoxTypeCircle : BEMBoxTypeSquare;
+    self.checkBox.boxType = (segmentedControl.selectedSegmentIndex == 0) ?BEMBoxTypeCircle : BEMBoxTypeHexagon;
 }
 
 - (IBAction)didTapOnDrawTypeSegmentedControl:(UISegmentedControl *)segmentedControl {
