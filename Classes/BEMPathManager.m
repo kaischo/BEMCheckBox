@@ -32,11 +32,26 @@
             [path moveToPoint:CGPointMake(x, self.size*0.1)];
             [path addLineToPoint:CGPointMake(self.size-x, self.size*0.1)];
             [path addLineToPoint:CGPointMake(self.size, self.size*0.5)];
-            //[path addLineToPoint:CGPointMake(self.size, self.size*0.66)];
             [path addLineToPoint:CGPointMake(self.size-x, self.size*0.9)];
             [path addLineToPoint:CGPointMake(x, self.size*0.9)];
             [path addLineToPoint:CGPointMake(0, self.size*0.5)];
-            //[path addLineToPoint:CGPointMake(0, self.size*0.33)];
+            [path closePath];
+            break;
+            
+        case BEMBoxTypeTiltedHexagon:
+            path = [[UIBezierPath alloc] init];
+            
+            //CGFloat a = self.size/(1+2*cosf(30*M_PI/180));
+            //CGFloat x = (self.size-a)/2;
+            
+            CGFloat y = self.size*0.25;
+            
+            [path moveToPoint:CGPointMake(self.size*0.5, 0)];
+            [path addLineToPoint:CGPointMake(self.size*0.9, y)];
+            [path addLineToPoint:CGPointMake(self.size*0.9, self.size-y)];
+            [path addLineToPoint:CGPointMake(self.size*0.5, self.size)];
+            [path addLineToPoint:CGPointMake(self.size*0.1, self.size-y)];
+            [path addLineToPoint:CGPointMake(self.size*0.1, y)];
             [path closePath];
             break;
             
